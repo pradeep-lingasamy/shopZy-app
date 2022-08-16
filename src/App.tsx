@@ -17,14 +17,14 @@ function App() {
     <BrowserRouter>
             <Header />
             <Routes>
-                <Route path="/" element={<Home /> } />
-                <Route path="/shop" element={<Shop />} > </Route>
-                <Route path='/shop/:id' element={<Showdetail />} />
-                <Route path="/cart" element={<Cart />} > </Route>
-                <Route path="/fav" element={<Favproduct />} />
-                <Route path="/features" element={<Features /> } />
-                <Route path="/about" element={<About /> } />
-                <Route path="/contact" element={<Contact /> } />
+                <Route path="/shopZy-app/" element={<Home /> } />
+                <Route path="/shopZy-app/shop" element={<Shop />} > </Route>
+                <Route path='/shopZy-app/shop/:id' element={<Showdetail />} />
+                <Route path="/shopZy-app/cart" element={<Cart />} > </Route>
+                <Route path="/shopZy-app/fav" element={<Favproduct />} />
+                <Route path="/shopZy-app/features" element={<Features /> } />
+                <Route path="/shopZy-app/about" element={<About /> } />
+                <Route path="/shopZy-app/contact" element={<Contact /> } />
 
             </Routes>
         </BrowserRouter>

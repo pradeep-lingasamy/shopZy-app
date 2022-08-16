@@ -19,7 +19,7 @@ function Singleproduct(props : Propsobj){
             </div> 
             <div className="content">
                 <div>
-                    <Link to={`/shop/${props.sdata.id}`}><p>{props.sdata.title}</p></Link>
+                    <Link to={`/shopZy-app/shop/${props.sdata.id}`}><p>{props.sdata.title}</p></Link>
                     
                     <p className="rate"> <BiRupee /> {props.sdata.price.value}</p>
                 </div>

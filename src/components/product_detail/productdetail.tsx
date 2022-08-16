@@ -40,7 +40,6 @@ function Productdetails({detail, par}: Propsobj){
     
     useEffect(()=>{
        setQty(0);
-       console.log(par);
         (prod.map((x)=> {if(x.id == parseInt(par!)) setQty(x.quantity)}));
         
     },[par])
@@ -73,11 +72,11 @@ function Productdetails({detail, par}: Propsobj){
                 </div>
                 <div>
                     <select name="size" id="size" >
-                        <option value='none' selected disabled>Choose an option</option>
+                        <option value='none' >Choose an option</option>
                         {option(detail?.additioninfo.Size)}
                     </select> <br />
                     <select name="color" id="color" >
-                        <option value='none' selected disabled>Choose an option</option>
+                        <option value='none'>Choose an option</option>
                         {option(detail?.additioninfo.Color)}
                     </select>
                     <div className='cartbtn'>

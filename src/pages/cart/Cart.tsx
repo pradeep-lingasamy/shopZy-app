@@ -17,7 +17,7 @@ function Cart(){
                     <td><div className='rate'><BiRupee />{ x.price}</div></td>
                     <td><div className="quantity">
                             <button onClick={()=>dispatch({type: 'Decrease', index: x.id}) } >-</button>
-                            <input type='number' value={x.quantity} />
+                            <input type='number' value={x.quantity} readOnly />
                             <button onClick={()=>dispatch({type: 'Increase', index: x.id}) }>+</button>
                         </div></td>
                     <td><div className='rate'><BiRupee />{x.price * x.quantity}</div></td>
@@ -30,7 +30,7 @@ function Cart(){
         <div className='cartcontainer' >
             <div style={{alignSelf: "baseline", marginLeft: '5vw'}}>
                 <ul className="path">
-                    <li><Link to='/'>{"Home"}</Link></li>
+                    <li><Link to='/shopZy-app/'>{"Home"}</Link></li>
                     <li>{">"}</li>
                     <li>{"Shopping cart"}</li>
                 </ul>

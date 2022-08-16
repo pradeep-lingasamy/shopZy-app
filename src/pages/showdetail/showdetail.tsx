@@ -59,9 +59,9 @@ function Showdetail(){
             <div className="showdetail">
                 <div>
                     <ul className="path">
-                        <li><Link to='/'>{"Home"}</Link></li>
+                        <li><Link to='/shopZy-app/'>{"Home"}</Link></li>
                         <li>{">"}</li>
-                        <li><Link to='/shop'>{"shop"}</Link></li>
+                        <li><Link to='/shopZy-app/shop'>{"shop"}</Link></li>
                         <li>{">"}</li>
                         <li>{detail?.title}</li>
                     </ul>

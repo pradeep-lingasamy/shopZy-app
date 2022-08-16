@@ -31,7 +31,7 @@ function Shop(){
                         </div>
                     </div>
                     <div className="searchcontainer" style={{height: togglebox==0 ? 0: 63.5 }}>  
-                        <input type='text' placeholder="search here..." onChange={(e)=> setFiltercontent(e.target.value) } />
+                        <input type='text' placeholder="search here..." onChange={(e)=> setFiltercontent(e.target.value.toLowerCase()) } />
                     </div>
                     <Products filtercontent={filtercontent}/>
                 

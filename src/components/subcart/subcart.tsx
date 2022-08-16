@@ -22,7 +22,7 @@ function Subcart({setOpa}: Propsobj){
                                 <img src={x.img} />
                             </div>
                             <div className='subcartcontent'>
-                                <Link to={`./shop/${x.id}`}><p onClick={()=>setOpa(-400)}>{x.title}</p></Link>
+                                <Link to={`/shopZy-app/shop/${x.id}`}><p onClick={()=>setOpa(-400)}>{x.title}</p></Link>
                                 <p className='rate'>{x.quantity}  x <BiRupee />{x.price} </p>
                             </div>
                         </div>
@@ -37,7 +37,7 @@ function Subcart({setOpa}: Propsobj){
             <div>
                 <p>Total Price: {useCartState()?.totalprice}</p>
                 <div className='buttondiv'>
-                    <Link to='./cart'><button onClick={()=>setOpa(-400) }>View cart</button></Link>
+                    <Link to='/shopZy-app/cart'><button onClick={()=>setOpa(-400) }>View cart</button></Link>
                     
                     <button onClick={()=> {setMsg('block'); setTimeout(()=>setMsg('none'), 5000);dispatch({type:'Checkout'})}}>Check out</button>
                 </div>

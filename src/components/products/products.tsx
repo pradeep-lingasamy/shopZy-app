@@ -30,12 +30,15 @@ function Products(props : PropsObj){
                 if(props.filtercontent==='all'){
                     return x;
                 }
-                if(x.category.startsWith(props.filtercontent!) || (x.title.toLowerCase().startsWith(props.filtercontent!.toLowerCase()) )){
-                    return x;
-                }
                 if(props.favproduct?.includes(x.id)){
                     return x;
                 }
+                if(x.category.startsWith(props.filtercontent!)){
+                    return x;
+                }
+                if((x.title.toLowerCase().startsWith(props.filtercontent!) ))
+                 return x;
+                
             }))
         };
         d();
@@ -43,7 +46,7 @@ function Products(props : PropsObj){
 
     return(
         <div className="container">
-            {data.map(s=> <Singleproduct sdata={s} overviewdata={overviewdata}/>)}
+            {data.map(s=> <Singleproduct sdata={s} overviewdata={overviewdata} key={s.id} />)}
             
             
             <div className="outerquickview" style={{display: display}}>

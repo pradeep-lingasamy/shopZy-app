@@ -31,13 +31,13 @@ function Header(){
     return(
         <div>
             <div className={'header'}>
-                <NavLink to='/' className='shopname'><h2>ShopZy</h2></NavLink>
+                <NavLink to='/shopZy-app/' className='shopname'><h2>ShopZy</h2></NavLink>
                 <div className='left'>
-                    <NavLink to='/' style={activecolor}>Home</NavLink>
-                    <NavLink to='/shop' style={activecolor}>Shop</NavLink>
-                    <div className={'features'}><NavLink to='/features' style={activecolor}>Features </NavLink><div className='hot'>HOT</div></div>
-                    <NavLink to='/about' style={activecolor}>About</NavLink>
-                    <NavLink to='/contact' style={activecolor}>Contact</NavLink>
+                    <NavLink to='/shopZy-app/' style={activecolor}>Home</NavLink>
+                    <NavLink to='/shopZy-app/shop' style={activecolor}>Shop</NavLink>
+                    <div className={'features'}><NavLink to='/shopZy-app/features' style={activecolor}>Features </NavLink><div className='hot'>HOT</div></div>
+                    <NavLink to='/shopZy-app/about' style={activecolor}>About</NavLink>
+                    <NavLink to='/shopZy-app/contact' style={activecolor}>Contact</NavLink>
                 </div>
                 <div className={'right'}>
                     <div className='itemcontainer'>
@@ -46,7 +46,7 @@ function Header(){
                     </div>
                     <div className="vl"></div>
                     <div className='itemcontainer'>
-                        <Link to={"./fav"}><AiOutlineHeart className={'iconstyle'}/></Link>
+                        <Link to="/shopZy-app/fav"><AiOutlineHeart className={'iconstyle'}/></Link>
                         <div className='totalitem'>{useCartState()?.favproduct.length}</div>
                     </div>
                     <div className="vl"></div>
@@ -69,11 +69,11 @@ function Header(){
 
             
            <div className="menu" style={menustyle} >
-                    <NavLink to='/' onClick={()=> setMenuheight(-400) }>Home</NavLink>
-                    <NavLink to='/shop' onClick={()=> setMenuheight(-400) }>Shop</NavLink>
-                    <NavLink to='/features' onClick={()=> setMenuheight(-400) }>Features </NavLink>
-                    <NavLink to='/about' onClick={()=> setMenuheight(-400) }>About</NavLink>
-                    <NavLink to='/contact' onClick={()=> setMenuheight(-400) }>Contact</NavLink>
+                    <NavLink to='/shopZy-app/' onClick={()=> setMenuheight(-400) }>Home</NavLink>
+                    <NavLink to='/shopZy-app/shop' onClick={()=> setMenuheight(-400) }>Shop</NavLink>
+                    <NavLink to='/shopZy-app/features' onClick={()=> setMenuheight(-400) }>Features </NavLink>
+                    <NavLink to='/shopZy-app/about' onClick={()=> setMenuheight(-400) }>About</NavLink>
+                    <NavLink to='/shopZy-app/contact' onClick={()=> setMenuheight(-400) }>Contact</NavLink>
            </div>
             
         </div>

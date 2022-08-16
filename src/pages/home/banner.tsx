@@ -4,15 +4,15 @@ import './banner.scss'
 function Banner(){
 
     let displaydata=()=>{
-        let a= data.map((d)=>{
+        let a= data.map((d,i)=>{
             return (
-                    <div className='subbanner'>
+                    <div key={i} className='subbanner'>
                         <img src={d.img} alt='img' />
                         <div className='bannercontent'>
                             <p className='title'>{d.title}</p>
                             <p className='highlight'>{d.highlight}</p>
                         </div>
-                        <Link to="/shop">
+                        <Link to="/shopZy-app/shop">
                         <div className='fading'>
                         </div>
                         <div className='fadingtxt'>

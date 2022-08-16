@@ -32,12 +32,12 @@ class Sliders extends Component{
     alldata(){
         let data = slidedata.map((d,i)=>{
             return (
-                <div className= {(i==this.state.ind) ? 'slideimg' : 'slideimg none'}>
+                <div key={i} className= {(i==this.state.ind) ? 'slideimg' : 'slideimg none'}>
                     <img src={d.img} />
                     <div className='slidecontent'>
                         <p className='title'>{d.title}</p>
                         <p className='highlight'>{d.highlight}</p>
-                        <Link to="/shop"><button>Shop Now</button></Link> 
+                        <Link to="/shopZy-app/shop"><button>Shop Now</button></Link> 
                     </div>
                     <div className='arrow'>
                         <AiFillCaretLeft onClick={()=>this.slide(0)} className='arrowbutton'/>
