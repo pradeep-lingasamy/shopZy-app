@@ -1,0 +1,108 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";;
+
+.showdetail{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+
+   .path{
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    font-size: small;
+    margin: 110px 10px 50px 0;
+    padding: 0;
+
+        li:last-child{
+            color: $gray
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .details{
+        border: $borderlitgay;
+        color: $gray;
+        margin: 50px auto;
+        ul{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+        }
+        li{
+            cursor: pointer;
+            position: relative;
+        }
+        .active{
+            color: black;
+            position: relative;
+        }
+        .active::after {
+            @include underline;
+            transform: scale(1);
+          }
+          li::after {
+            @include underline;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+          }
+          li:hover::after,li:hover{
+            opacity: 1;
+            transform: scale(1);
+            color: black;
+          }
+        .description{
+            padding: 100px;
+        }
+        .addinfo{
+            display: flex;
+            margin: 50px auto;
+            width: 40%;
+            color: $gray;
+            font-size: smaller;
+            font-weight: 500;
+            gap: 50px;
+            
+            span{
+                color: rgb(79, 79, 79);
+            }
+        }
+    }
+}
+@keyframes img{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (min-width: 1200px) {
+    .showdetail{
+        width: 70%;
+    } 
+     
+ }
+
+ @media (max-width: 500px) {
+    .showdetail{
+        .details{
+            ul{
+                gap:15px;
+            }
+            .description{
+                padding: 20px;
+            }
+            .addinfo{
+                width: 60%;
+            }
+        }
+    } 
+     
+ }

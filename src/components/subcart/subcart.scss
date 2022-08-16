@@ -1,0 +1,81 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variable.scss';
+
+.subcartcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 100%;
+    margin: auto auto;
+    width: 70%;
+    background-color: white;
+
+   .contentscroll{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        overflow-Y: auto;
+
+    .subcontainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        .imgcontainer{
+            width: 50px;
+            border: $borderlitgay;
+            position: relative;
+            height: 70px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+        }
+        .imgcontainer::after{
+            @include imgremove;
+        }
+        .imgcontainer:hover::after{
+            opacity: 1;
+        }
+    }
+    .subcartcontent{
+        color: $gray ;
+        font-size: 14px;
+        a{
+            text-decoration: none;
+            color: $gray ;
+        }
+        a:hover{
+            color: $midblue ;
+        }
+        .rate{
+            @include ratealign;
+        }
+    }
+   }
+    .buttondiv{
+        display: flex;
+        gap: 10px;
+        margin-bottom: 90px;
+        button{
+            @include button;
+            background-color: black;
+            min-width: 145px;
+        }
+        button:hover{
+            background-color: $midblue;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .subcartcontainer{
+        .buttondiv{
+            flex-wrap: wrap;
+        }
+    }  
+ }

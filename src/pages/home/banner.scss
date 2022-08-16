@@ -1,0 +1,107 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variable.scss';
+
+.banner{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 70px;
+    gap: 10px;
+    
+    .subbanner{
+        width: 25%;
+        position: relative;
+        border: $borderlitgay;
+        overflow: hidden;
+            
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .bannercontent{
+            position: absolute;
+            top: 0;
+            left: 40px;
+
+            .title{
+                font-size: xx-large ;
+                font-weight: bolder;
+                margin-bottom: 0;
+            }
+            .highlight{
+                margin-top: 0;
+                color: $gray;
+            }
+        }
+        .fading{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background-color: $midblue;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s linear;
+            cursor: pointer;
+        }
+        .fadingtxt{
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer;
+            p{
+                color: $white;
+                font-weight: 600;
+                padding-bottom: 0;
+                opacity: 1;
+                margin-bottom: 0;
+                height: 0;
+                overflow: hidden;
+                transition: height 0.5s ease 0.2s;
+            }
+            hr{
+                width: 0;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+                border: none;
+                margin-top: 0;
+                transition: width 0.5s;
+            }
+        }
+        
+        
+    }
+    .subbanner:hover .fading{
+        opacity: 0.7;
+    } 
+    .subbanner:hover .fading ~ .fadingtxt{
+        
+        p{
+            height: 24px;
+        }
+        hr{
+            width: 85px;
+        }
+    }
+
+}
+
+@media (max-width: 750px) {
+    .banner{
+
+        .subbanner{
+            width: 100%;
+        }
+    }  
+}
+
+@media (min-width: 750px)AND (max-width: 1200px) {
+    .banner{
+
+        .subbanner{
+            width: 40%;
+        }
+    }  
+}

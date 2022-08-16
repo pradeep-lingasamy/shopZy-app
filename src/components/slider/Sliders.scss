@@ -1,0 +1,149 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+
+.slideimg{
+    position: relative;
+    animation: imgani 1.5s ease-in, imganiout 0.5s ease-out 7.7s;
+    overflow: hidden;
+    img{
+        width: 100%;
+        min-width: 600px;
+        object-fit: contain;
+        
+    }
+
+    .slidecontent{
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        .title{
+            font-size: 28px;
+            margin: 0;
+            animation: titleani 1.2s;
+        }
+        .highlight{
+            font-size: 60px;
+            margin: 0;
+            opacity: 0;
+            animation: highlightani 1.2s ease-in-out 1.2s forwards;
+        }
+        button{
+            @include button;
+            transform: scale(0);
+            animation: buttonani 1.2s ease 2.4s forwards;
+           
+        }
+        button:hover{
+            background-color: black;
+        }
+    }
+
+    .arrow{
+        position: absolute;
+        justify-content: space-between;
+        top: 40%;
+        left: 3%;
+        width: 93%;
+        display: flex;
+        opacity: 0;
+        transition: all 0.5s ease;
+    
+        .arrowbutton{
+            font-size: 40px;
+            color: $gray;
+            cursor: pointer;
+            transition: all 1s ease;
+        }
+        .arrowbutton:hover{
+            color: $midblue;
+        }
+    }
+}
+
+.slideimg:hover .arrow{
+    opacity: 1;
+}
+
+.none{
+    display: none;
+}   
+
+@media (max-width: 750px) {
+    .slideimg{
+        overflow: hidden;
+        height: 550px;
+        img{
+            width: 100%;
+            height: 100%;
+            min-width: 0;
+            object-fit: cover;
+            
+        }
+        .slidecontent{
+            left: 6%;
+            .title{
+                font-size: 20px;
+            }
+            .highlight{
+                font-size: 40px;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+@keyframes imgani{
+    from{
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes imganiout{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.1;
+    }
+}
+
+
+@keyframes titleani{
+    from{
+        opacity: 0;
+        transform : translate(0,-50px);
+    }
+    to{
+        opacity: 1;
+        transform : translate(0px, 0px);
+    }  
+}
+@keyframes highlightani{
+    from{
+        opacity: 0;
+        transform : translate(0,50px);
+    }
+    to{
+        opacity: 1;
+        transform : translate(0px, 0px);
+    }  
+}
+@keyframes buttonani{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform : scale(1)
+    }  
+}

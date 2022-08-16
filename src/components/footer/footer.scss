@@ -1,0 +1,123 @@
+@import "../../styles/variable.scss";
+@import "../../styles/mixins.scss";
+
+
+
+.footer{
+    background-color: $bgcolor;
+    color: rgb(168, 168, 168);
+    font-size: smaller;
+    padding: 50px 0;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .mainsection{
+        display: flex;
+        line-height: 30px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .section{
+            width: 25%;
+        }
+
+        .list{
+            list-style-type: none;
+
+            li:first-child{
+                margin-bottom: 30px;
+                font-weight: bolder;
+                color: $white;
+                font-size: medium;
+
+            }
+            p{
+                max-width: 300px;
+            }   
+            button{
+                @include button;
+                transition: all 0.5s;
+                cursor: pointer;
+            }
+            button:hover{
+                background-color: $white;
+                color: $midblue;
+            }
+            input{
+                border: none;
+                min-width: 250px;
+                outline: none;
+                background-color: transparent;
+                color: rgb(168, 168, 168);
+            }
+            .hrdiv{
+                position: relative;
+            }
+            .hr1{
+                border: none;
+                background-color:  $litgray;
+                height: 2px;;
+                margin: 0;
+                width: 250px;
+            }
+            .hr2{
+                position: absolute;
+                border: none;
+                top: 0;
+                height: 2px;
+                margin: 0;
+                background-color: $midblue;
+                width: 0;
+                transition: width 1s ease;
+            }
+            input:focus~div .hr2{
+            width: 250px;
+            }
+        }
+        ~p{
+            margin-top: 50px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .footer{
+        .mainsection{
+
+            .section{
+                width: 100%;
+            } 
+        }
+
+    }
+    
+}
+
+@media (min-width: 601px)AND (max-width: 1050px) {
+    .footer{
+        .mainsection{
+
+            .section{
+                width: 50%;
+            } 
+        }
+
+    }
+}
+
+@media (max-device-width: 200px) {
+    .footer{
+        .mainsection{
+            justify-content: flex-start;
+            .section{
+                width: 100%;
+            } 
+        }
+
+    }
+    
+}

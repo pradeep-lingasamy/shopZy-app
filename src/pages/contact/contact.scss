@@ -1,0 +1,88 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+
+
+.headerimg{
+    @include headerimg;
+}
+
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .msgContainer{
+        border: $borderlitgay;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        p{
+            font-size: 25px;
+            text-align: center;
+        }
+
+        input,textarea{
+            width: 80%;
+            height: 45px;
+            border: $borderlitgay;
+            outline: none;
+            font-size: 14px;
+            box-sizing: border-box;
+            padding: 10px 20px;
+        }
+        textarea{
+            height: 200px;
+            padding: 20px 20px;
+        }
+        button{
+            @include button;
+            background-color: black;
+            width: 80%;
+        }
+        button:hover{
+            background-color: $midblue;
+        }
+    }
+    .addressContainer{
+        border: $borderlitgay;
+        padding: 30px 0;
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        p{
+            width: 70%;
+            color: $midblue;
+            padding-left: 70px
+        }
+        .alignicon{
+            @include ratealign;
+            color: black;
+            gap: 20px;
+            padding-left: 0;
+        }
+        
+    }
+}
+
+@media (max-width: 600px){
+    .contactContainer{
+        flex-direction: column;
+        align-items: center;
+        .msgContainer,.addressContainer{
+            width: 90%;
+        }
+    }
+}
+@media (min-width: 600px) AND (max-width: 800px) {
+    .contactContainer{
+        margin: 50px 10px;
+        .msgContainer,.addressContainer{
+            width: 50%;
+        }
+    }
+}

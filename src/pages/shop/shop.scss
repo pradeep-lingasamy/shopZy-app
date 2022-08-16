@@ -1,0 +1,111 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss'; 
+
+.wholecontainer{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    
+
+    .filter{
+        margin: 100px auto 20px auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        ul,.right{
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        .right{
+            padding: 0 0 0 40px;
+            .searchbut{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 110px;
+                height: 40px;
+                border: $borderlitgay;
+                border-radius: 3px;
+                color: gray;
+                font-size: 16px;
+                cursor: pointer;
+                position: relative;
+                background-color: white;
+            }
+            .searchbut:hover,
+            .searchbut:hover .icon{
+                background-color: $midblue;
+                color: white;
+            }
+            
+            .active{
+                background-color: rgba(128, 128, 128, 0.15);
+                border: none;
+            }
+            .active::after{
+                content: "";
+                position: absolute;
+                border: 12px solid white;
+                border-top: 12px solid rgba(128, 128, 128, 0.15);
+                bottom: -24px;
+                left: 40%;
+            }
+            .textalign{
+                @include ratealign;
+                .icon{
+                    color: black;
+                }
+            }
+            .active:hover::after{
+                border-top: 12px solid $midblue;
+            }
+        }
+        li{
+            cursor: pointer;
+            position: relative;
+            color: $gray;
+        }
+        .underline{
+            position: relative;
+            color: black;
+        }
+        .underline::after {
+            @include underline;
+            transform: scale(1);
+          }
+        li::after {
+            @include underline;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+          }
+        li:hover::after{
+        opacity: 1;
+        transform: scale(1);
+        }    
+    }
+    .searchcontainer{
+            margin-bottom: 20px;
+           overflow: hidden;
+           transition: all 0.5s linear;
+           input{
+            border: $borderlitgay;
+            height: 40px;
+            box-sizing: border-box;
+            padding: 30px 20px;
+            font-size: 16px;
+            width: 100%;
+            
+           }
+    }
+}
+@media (min-width: 1440px) {
+    .wholecontainer{
+        width: 80%;
+    }
+
+}

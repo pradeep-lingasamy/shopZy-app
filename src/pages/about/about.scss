@@ -1,0 +1,79 @@
+@import '../../styles/variable.scss';
+@import '../../styles/mixins.scss';
+.aboutcontainer{
+    div{
+        @include headerimg;
+    }
+    .aboutcontent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:100px;
+        padding: 10px;
+        div{
+            display: flex;
+            gap: 70px;
+            .imgcontainer{
+                width: 350px;
+                height: 350px;
+                min-width: 350px;
+                margin-top: 50px;
+                border: 3px solid rgba(128, 128, 128, 0.355);
+                div{
+                    transform: translate(20px, -20px);
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                        transition: all 1s ease;
+                    }
+                }  
+            }
+            .missionimg{
+                div{
+                    transform: translate(-20px, -20px);
+                }
+            }
+            .belowimg{
+                display: none;
+            }
+            p{
+                max-width: 700px;
+                color: $gray;
+                font-size: 14px;
+                line-height: 1.78;
+                h1{
+                    color: black;
+                }
+            }
+            i{
+                border-left: 3px solid rgba(128, 128, 128, 0.267) ;
+                padding-left: 30px;
+            }
+            img:hover{
+                transform: scale(1.2);
+            }
+        }
+        
+    }
+   
+}
+
+@media (max-width: 800px){
+    .aboutcontainer{
+        .aboutcontent{
+            div{
+                flex-direction: column;
+            
+            .missionimg{
+                display: none;
+            }
+            .belowimg{
+                display: block;
+            }
+        }
+        }
+    }
+
+}

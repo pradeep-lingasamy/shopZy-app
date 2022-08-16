@@ -1,0 +1,148 @@
+@import '../../styles/mixins.scss';
+@import '../../styles/variable.scss';
+
+.container{
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+
+
+    .outerquickview{
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 299;
+        overflow: auto;
+
+        .quickview{
+            position: relative;
+            background-color: white;
+            z-index: 300;
+            padding: 20px;
+            margin: 70px 20px;
+            .close{
+                position: absolute;
+                right: -140px;
+                top: -70px;
+                margin: 25px 150px;
+                color:gray;
+                font-size: 35px;
+                cursor:pointer;
+            }
+        }
+    }
+}
+.singlecontainer{
+    max-width: 270px;
+    .imgcontainer{
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        border: $borderlitgay; 
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .7s; 
+        }
+        
+        button{
+            position: absolute;
+            @include button;
+            bottom: -100px;
+            left: 50%;
+            min-width: 145px;
+            color: black;
+            background-color: white;
+            transform: translateX(-50%);
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+    }
+    .imgcontainer:hover img{
+        transform: scale(1.1);
+    }
+    .imgcontainer:hover button{
+        bottom: 20px
+    }
+    .content{
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        .iconheart{
+            color: $gray;
+            cursor: pointer;
+            font-size: larger;
+        }
+        .iconheart:hover{
+            color: blue;
+        }
+        a{
+            text-decoration: none;
+        }
+        p{
+            color: $litgray;;
+            margin: 10px 0;
+            transition: color .5s ease;
+        }
+        p:hover:first-child{
+            color:$midblue;
+        }
+        .rate{
+            display: flex;
+            align-items: center;
+            color: $darkgray;
+        }
+    }
+}
+
+
+@media (min-width: 764px) AND (max-width: 930px) {
+    .container{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+}
+
+@media (min-width: 500px) AND  (max-width: 764px) {
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    .singlecontainer{
+        max-width: 100%;
+        .imgcontainer{
+            width: 100%;
+            height: 90%;
+        }
+    }
+
+}
+
+@media (max-width: 499px) {
+    .container{
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+    
+    .singlecontainer{
+        max-width: 100%;
+        .imgcontainer{
+            width: 100%;
+            height: 90%;
+        }
+    }
+    .content{
+        padding: 15px;
+    }
+}
+
+}

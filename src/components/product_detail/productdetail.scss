@@ -1,0 +1,127 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variable.scss";
+
+.detailcontainer{
+    display: flex;
+    gap: 50px;
+   
+
+    .imagecontainer{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap:40px;
+
+        .threeimage{
+            width: 70px;
+            img{
+                width: 100%;
+                border: $borderlitgay;
+                margin-bottom: 30px;
+                cursor: pointer;
+            }
+        }
+        .singleimage{
+            width: 75%;
+            border: $borderlitgay;
+            img{
+                width: 100%;
+                animation: img 1.5s ease;
+            }
+        }
+    }
+
+    .contentcontainer{
+        >p:first-child{
+            font-size: x-large;
+        }
+        .price{
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+        }
+        >p:last-child{
+            color: $gray;
+            max-width: 400px;
+        }
+        .addinfo{
+            display: flex;
+            color: $gray;
+            font-size: medium;
+            margin-left: 10%;
+            gap: 40px;
+            align-items: baseline;
+            p{
+                margin-top: 30px;               
+            }
+            select{
+                height: 30px;
+                width: 120px;
+                margin: 10px 0;
+                border: 1px solid gray;
+                border-radius: 5px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow:hidden !important;
+                text-indent: 10px;
+            }
+        }
+        .quantity{
+            margin-top: 10px;
+            @include quantitybutton;
+        }
+
+        .cartbutton{
+            @include button;
+            transition: all 0.5s;
+            cursor: pointer;
+        }
+        .cartbutton:hover{
+            background-color: black;
+        }
+    }
+
+}
+
+@media (max-width: 710px) {
+    .detailcontainer{
+        flex-wrap: wrap;
+        .contentcontainer{
+            .addinfo{
+                .cartbtn{
+                    display: flex;
+                    gap: 10px;
+                }
+            }
+        }
+    }   
+ }
+ 
+ @media (max-width: 605px) {
+    .detailcontainer{
+        flex-wrap: wrap;
+        .contentcontainer{
+            .addinfo{
+                .cartbtn{
+                    display: block;
+                    gap: 10px;
+                }
+            }
+        }
+    }   
+ }
+
+ @media (min-width: 711px) AND (max-width: 900px) {
+
+    .detailcontainer{
+        .contentcontainer{
+            .addinfo{
+                margin-left: 0;
+                margin-right: 20px;
+            }
+        }
+
+    }
+    
+    
+ }
