@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/pradeep-lingasamy/shopZy-app.git/static/css/main.aa80d794.css",
-    "main.js": "/pradeep-lingasamy/shopZy-app.git/static/js/main.48fd42a2.js",
-    "static/media/mission.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/mission.33edf7e0a874a32586c3.jpg",
-    "static/media/story.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/story.ad35f332f9a874b933cf.jpg",
-    "static/media/men.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/men.68b2d76d47f2c8f7212b.jpg",
-    "static/media/fe2.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/fe2.22103519b0565525ec6c.jpg",
-    "static/media/fe1.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/fe1.db13512f1e6304214dde.jpg",
-    "static/media/slideimg2.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/slideimg2.7c5768f1974b591695a4.jpg",
-    "static/media/slideimg1.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/slideimg1.5eb50b84b5a514ae02df.jpg",
-    "static/media/slideimg3.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/slideimg3.ae60720641264fd50250.jpg",
-    "static/media/fe3.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/fe3.1739b5982e033eaeabf2.jpg",
-    "static/media/women.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/women.2caae45a96cfd15bbcf0.jpg",
-    "static/media/features.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/features.1cbbbfaf388eb2edd599.jpg",
-    "static/media/accessory.jpg": "/pradeep-lingasamy/shopZy-app.git/static/media/accessory.e960a5d00d298afb2572.jpg",
-    "index.html": "/pradeep-lingasamy/shopZy-app.git/index.html",
-    "main.aa80d794.css.map": "/pradeep-lingasamy/shopZy-app.git/static/css/main.aa80d794.css.map",
-    "main.48fd42a2.js.map": "/pradeep-lingasamy/shopZy-app.git/static/js/main.48fd42a2.js.map"
+    "main.css": "/shopZy-app/static/css/main.aa80d794.css",
+    "main.js": "/shopZy-app/static/js/main.bc0c3207.js",
+    "static/media/mission.jpg": "/shopZy-app/static/media/mission.33edf7e0a874a32586c3.jpg",
+    "static/media/story.jpg": "/shopZy-app/static/media/story.ad35f332f9a874b933cf.jpg",
+    "static/media/men.jpg": "/shopZy-app/static/media/men.68b2d76d47f2c8f7212b.jpg",
+    "static/media/fe2.jpg": "/shopZy-app/static/media/fe2.22103519b0565525ec6c.jpg",
+    "static/media/fe1.jpg": "/shopZy-app/static/media/fe1.db13512f1e6304214dde.jpg",
+    "static/media/slideimg2.jpg": "/shopZy-app/static/media/slideimg2.7c5768f1974b591695a4.jpg",
+    "static/media/slideimg1.jpg": "/shopZy-app/static/media/slideimg1.5eb50b84b5a514ae02df.jpg",
+    "static/media/slideimg3.jpg": "/shopZy-app/static/media/slideimg3.ae60720641264fd50250.jpg",
+    "static/media/fe3.jpg": "/shopZy-app/static/media/fe3.1739b5982e033eaeabf2.jpg",
+    "static/media/women.jpg": "/shopZy-app/static/media/women.2caae45a96cfd15bbcf0.jpg",
+    "static/media/features.jpg": "/shopZy-app/static/media/features.1cbbbfaf388eb2edd599.jpg",
+    "static/media/accessory.jpg": "/shopZy-app/static/media/accessory.e960a5d00d298afb2572.jpg",
+    "index.html": "/shopZy-app/index.html",
+    "main.aa80d794.css.map": "/shopZy-app/static/css/main.aa80d794.css.map",
+    "main.bc0c3207.js.map": "/shopZy-app/static/js/main.bc0c3207.js.map"
   },
   "entrypoints": [
     "static/css/main.aa80d794.css",
-    "static/js/main.48fd42a2.js"
+    "static/js/main.bc0c3207.js"
   ]
 }
