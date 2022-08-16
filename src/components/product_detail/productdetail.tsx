@@ -12,7 +12,7 @@ type Propsobj={
 function Productdetails({detail, par}: Propsobj){
 
     let dispatch=useDispactdata();  
-    
+    const prod=useCartState()?.product!;
 
 
 
@@ -37,12 +37,14 @@ function Productdetails({detail, par}: Propsobj){
         return singleob;
     }
 
-    const [cartdata, setCartdata]= useState(useCartState()?.product!);
+    
     useEffect(()=>{
-        let a:number=-1;
-        cartdata.forEach((x)=>{if(x.id == parseInt(par!)) a= x.id});
-        (cartdata.map((x)=> {if(x.id == parseInt(par!)) setQty(x.quantity) }));
-    },[])
+       setQty(0);
+       console.log(par);
+        (prod.map((x)=> {if(x.id == parseInt(par!)) setQty(x.quantity)}));
+        
+    },[par])
+    
 
     
     return(

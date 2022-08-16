@@ -19,7 +19,7 @@ function Products(props : PropsObj){
     const [display, setDisplay]= useState("none")
 
     function overviewdata(n:number){
-        setOverviewind(n-1)
+        setOverviewind(n)
         setDisplay("block")
     }
 
@@ -52,7 +52,7 @@ function Products(props : PropsObj){
                 
                 <div className="quickview">
                     <p className="close" onClick={()=> setDisplay('none')}> <MdOutlineClose /> </p>
-                    <Productdetails  detail={data[overviewind]}  par={overviewind.toString()} />
+                    <Productdetails  detail={data[overviewind-1]}  par={overviewind.toString()} />
                 </div>
                 
             </div>
