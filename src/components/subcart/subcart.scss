@@ -52,11 +52,11 @@
         a:hover{
             color: $midblue ;
         }
-        .rate{
-            @include ratealign;
-        }
     }
    }
+   .rate{
+    @include ratealign;
+}
     .buttondiv{
         display: flex;
         gap: 10px;

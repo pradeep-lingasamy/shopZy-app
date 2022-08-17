@@ -35,7 +35,10 @@ function Subcart({setOpa}: Propsobj){
                 <h1>Thanks for purchasing</h1>
             </div>
             <div>
-                <p>Total Price: {useCartState()?.totalprice}</p>
+                
+                <p className='rate'> {"Total Price:"}<BiRupee />{useCartState()?.totalprice}</p>
+                
+                
                 <div className='buttondiv'>
                     <Link to='/shopZy-app/cart'><button onClick={()=>setOpa(-400) }>View cart</button></Link>
                     
