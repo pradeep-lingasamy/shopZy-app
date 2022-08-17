@@ -63,7 +63,7 @@ function cartreducer(state : State, action: Action) {
             }
 
         case ActionKind.DecreaseQty:
-            s=s.map((x)=>{if(+x.id == +action.index) {(x.quantity-1 <0)? x.quantity=0 : x.quantity--} return x  })
+            s=s.map((x)=>{if(+x.id == +action.index) {(x.quantity-1 <1)? x.quantity=1 : x.quantity--} return x  })
             localStorage.setItem('cartdata',JSON.stringify(s));
             return {
                 ...state,

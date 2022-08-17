@@ -17,7 +17,7 @@ function Productdetails({detail, par}: Propsobj){
 
 
     const [ind, setInd]= useState<number>(0);
-    const [qty, setQty]= useState<number>(0);
+    const [qty, setQty]= useState<number>(1);
 
   
 
@@ -39,7 +39,7 @@ function Productdetails({detail, par}: Propsobj){
 
     
     useEffect(()=>{
-       setQty(0);
+       setQty(1);
         (prod.map((x)=> {if(x.id == parseInt(par!)) setQty(x.quantity)}));
         
     },[par])
@@ -81,7 +81,7 @@ function Productdetails({detail, par}: Propsobj){
                     </select>
                     <div className='cartbtn'>
                         <div className="quantity">
-                            <button onClick={()=>setQty(qty==0? 0: qty-1)}>-</button>
+                            <button onClick={()=>setQty(qty==1? 1: qty-1)}>-</button>
                             <input type='number' value={qty} onChange={(e)=> setQty(parseInt(e.currentTarget.value))} />
                             <button onClick={()=>setQty(isNaN(qty) ? 1: qty+1)}>+</button>
                         </div>
