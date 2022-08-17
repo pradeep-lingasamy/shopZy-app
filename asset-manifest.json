@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopZy-app/static/css/main.0781c084.css",
-    "main.js": "/shopZy-app/static/js/main.50dd884f.js",
+    "main.js": "/shopZy-app/static/js/main.9c3f4fa0.js",
     "static/media/mission.jpg": "/shopZy-app/static/media/mission.33edf7e0a874a32586c3.jpg",
     "static/media/story.jpg": "/shopZy-app/static/media/story.ad35f332f9a874b933cf.jpg",
     "static/media/men.jpg": "/shopZy-app/static/media/men.68b2d76d47f2c8f7212b.jpg",
@@ -16,10 +16,10 @@
     "static/media/accessory.jpg": "/shopZy-app/static/media/accessory.e960a5d00d298afb2572.jpg",
     "index.html": "/shopZy-app/index.html",
     "main.0781c084.css.map": "/shopZy-app/static/css/main.0781c084.css.map",
-    "main.50dd884f.js.map": "/shopZy-app/static/js/main.50dd884f.js.map"
+    "main.9c3f4fa0.js.map": "/shopZy-app/static/js/main.9c3f4fa0.js.map"
   },
   "entrypoints": [
     "static/css/main.0781c084.css",
-    "static/js/main.50dd884f.js"
+    "static/js/main.9c3f4fa0.js"
   ]
 }
