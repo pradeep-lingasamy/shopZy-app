@@ -103,6 +103,27 @@
         }
     }
 }
+.pagenumberContainer{
+    display: flex;
+    justify-content: end;
+    gap: 2px;
+    .numberbutton{
+        height: 25px;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        outline: none;
+        cursor: pointer;
+        border: none;
+    }
+    .active{
+        background-color: $midblue;
+        color: white;
+    }
+
+}
+
 
 
 @media (min-width: 764px) AND (max-width: 930px) {
@@ -143,6 +164,9 @@
     .content{
         padding: 15px;
     }
-}
+    }
+    .pagenumberContainer{
+       margin-top: 50px;
+    }
 
 }

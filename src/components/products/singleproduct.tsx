@@ -7,6 +7,7 @@ import {useCartState ,useDispactdata} from "../../cart-context"
 type Propsobj={
     sdata: Obj,
     overviewdata: (n:number)=>void,
+    indexview: number,
 }
 
 function Singleproduct(props : Propsobj){
@@ -15,7 +16,7 @@ function Singleproduct(props : Propsobj){
         <div key={props.sdata.id} className="singlecontainer">  
             <div className="imgcontainer">
                 <img src={props.sdata.image[0]} />
-                <button onClick={()=>props.overviewdata(props.sdata.id)}>Quick view</button>
+                <button onClick={()=>props.overviewdata(props.indexview)}>Quick view</button>
             </div> 
             <div className="content">
                 <div>

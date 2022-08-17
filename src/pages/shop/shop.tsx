@@ -8,8 +8,8 @@ function Shop(){
 
     const [filtercontent, setFiltercontent]= useState<string>('all');
     const [togglebox, setTogglebos]= useState<number>(0);
-    const Onclick=(n:string)=>{
-        setFiltercontent(n);
+    const Onclick=(x:string)=>{
+        setFiltercontent(x);
     }
 
     return(

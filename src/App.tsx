@@ -10,11 +10,13 @@ import Favproduct from './pages/favproduct/Favproduct';
 import About from './pages/about/about';
 import Features from './pages/features/features';
 import Contact from './pages/contact/contact';
+import ScrollToTop from './pages/ScrollToTop';
 
 
 function App() {
      return (
     <BrowserRouter>
+            <ScrollToTop />
             <Header />
             <Routes>
                 <Route path="/shopZy-app/" element={<Home /> } />

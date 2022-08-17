@@ -31,7 +31,7 @@ function Header(){
     return(
         <div>
             <div className={'header'}>
-                <NavLink to='/shopZy-app/' className='shopname'><h2>ShopZy</h2></NavLink>
+                <NavLink to='/shopZy-app' className='shopname'><h2>ShopZy</h2></NavLink>
                 <div className='left'>
                     <NavLink to='/shopZy-app/' style={activecolor}>Home</NavLink>
                     <NavLink to='/shopZy-app/shop' style={activecolor}>Shop</NavLink>
