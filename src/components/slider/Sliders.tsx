@@ -24,8 +24,12 @@ class Sliders extends Component{
         }
     }
     componentDidMount(): void {
-         this.timer = setInterval(()=>this.sliding(),8000);
+         this.timer =  setTimeout(()=>this.sliding(),8000);
     }
+    componentDidUpdate(): void {
+        clearInterval(this.timer)
+        this.timer =  setTimeout(()=>this.sliding(),8000);
+   }
     sliding():void{
         this.setState({ ind: this.state.ind == slidedata.length-1 ? 0 : this.state.ind + 1 })
     }
